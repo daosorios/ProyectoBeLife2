@@ -12,10 +12,25 @@
         Title="MainWindow" Height="600" Width="800">
     <Grid>
         <!--Tab Control con item para distintas paginas -->
-        <Controls:MetroTabControl>
-            <Controls:MetroTabItem>
+        <Controls:MetroTabControl Name="TBmain">
+            <Controls:MetroTabItem Name="TB1">
                 <Grid>
                     <Label Content=" Pagina 1" HorizontalAlignment="Center"/>
+                </Grid>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Name="TB2">
+                <Grid>
+                    <Label Content=" Pagina 2" HorizontalAlignment="Center"/>
+                </Grid>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Name="TB3">
+                <Grid>
+                    <Label Content=" Pagina 3" HorizontalAlignment="Center"/>
+                </Grid>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Name="TB4">
+                <Grid>
+                    <Label Content=" Pagina 4" HorizontalAlignment="Center"/>
                 </Grid>
             </Controls:MetroTabItem>
         </Controls:MetroTabControl>
@@ -29,33 +44,25 @@
 
         <Controls:Flyout x:Name="FlyMenu" Width="129" Background="Gray" ContextMenuOpening="Flyout_ContextMenuOpening">
             <Canvas>
-                <Button Background="Gray" Canvas.Left="5" Canvas.Top="0">
+                <Button x:Name="BtCliente" Background="Gray" Canvas.Left="5" Canvas.Top="0" Click="BtCliente_Click" >
                     <StackPanel>
                         <Image Source="Imagen/user.png" Width="90" Height="84"/>
                         <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" >Registro Cliente</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Background="Gray" Canvas.Left="5" Canvas.Top="120">
+                <Button x:Name="BtListadoCliente" Background="Gray" Canvas.Left="5" Canvas.Top="120" Click="BtListadoCliente_Click" >
                     <StackPanel>
                         <Image Source="Imagen/ListadoCliente.png" Width="90" Height="84"/>
                         <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" >Listado Cliente</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Background="Gray" Canvas.Top="240" Width="128" RenderTransformOrigin="0.5,0.5">
-                    <Button.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform AngleY="0.421"/>
-                            <RotateTransform/>
-                            <TranslateTransform Y="0.493"/>
-                        </TransformGroup>
-                    </Button.RenderTransform>
+                <Button x:Name="BtContrato" Background="Gray" Canvas.Top="240" Width="128" Click="BtContrato_Click" >               
                     <StackPanel>
                         <Image Source="Imagen/Contrato.png" Width="109" Height="97"/>
                         <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" >Contrato de Vida</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Background="Gray" Canvas.Top="360" Width="129">
+                <Button x:Name="BtListadoContrato" Background="Gray" Canvas.Top="360" Width="129" Click="BtListadoContrato_Click">
                     <StackPanel>
                         <Image Source="Imagen/Contrato1.png" Width="109" Height="97"/>
                         <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" >Listado Contrato</TextBlock>
